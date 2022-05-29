@@ -11,18 +11,15 @@ exports.getAllComments = async ( req , res ) => {
 
     try {
         const comments = await prisma.commentaire.findMany({
+            take : take ? parseInt(take) : undefined,
+            skip : skip ? parseInt(skip) : undefined,
             where : {
                 articleId : parseInt(articleId)
             }
         })
 
-        take = take ? parseInt(take) : comments.length
-        skip = skip ? parseInt(skip) : 0
         
-        const start = skip >= comments.length ? 0 : skip
-        const end = Math.min(skip + take , comments.length)
-        const returnedComments = comments.splice(start , end)
-        return res.status(200).send(returnedComments)
+        return res.status(200).send(comments)
         
         
     } catch (error) {
