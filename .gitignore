@@ -1,4 +1,4 @@
 node_modules
 .env
-test
+test/
 practice-express-blog-project

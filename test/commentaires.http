@@ -13,11 +13,11 @@ Content-Type: application/json
 }
 
 ### Delete a comment
-DELETE http://localhost:3000/api/v1/articles/3/comments/1043
+DELETE http://localhost:3000/api/v1/articles/3/comments/1062
 
 
 ### Update a comment
-PATCH http://localhost:3000/api/v1/articles/1/comments/1044
+PATCH http://localhost:3000/api/v1/articles/3/comments/1044
 Content-Type: application/json
 
 {
