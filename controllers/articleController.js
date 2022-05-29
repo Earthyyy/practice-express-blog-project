@@ -7,7 +7,10 @@ exports.getAllArticles = async ( req , res ) => {
     let { take , skip } = req.query
 
     try {
+
         const article = await prisma.article.findMany({
+            take : take ? parseInt(take) : undefined,
+            skip : skip ? parseInt(skip) : undefined,
             include : {
                 author : {
                     select : {
@@ -17,13 +20,8 @@ exports.getAllArticles = async ( req , res ) => {
             }
         })
 
-        take = take ? parseInt(take) : article.length
-        skip = skip ? parseInt(skip) : 0
         
-        const start = skip >= article.length ? 0 : skip
-        const end = Math.min(skip + take , article.length)
-        const returnedArticle = article.splice(start , end)
-        return res.status(200).send(returnedArticle)
+        return res.status(200).send(article)
         
     } catch (error) {
         console.log(error)
