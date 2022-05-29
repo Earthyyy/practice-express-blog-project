@@ -1,10 +1,10 @@
 
 ### Get All comments from an article
-GET http://localhost:3000/articles/3/comments
+GET http://localhost:3000/api/v1/articles/3/comments
 
 
 ### Add a comment to an article
-POST http://localhost:3000/articles/3/comments
+POST http://localhost:3000/api/v1/articles/3/comments
 Content-Type: application/json
 
 {
@@ -13,11 +13,11 @@ Content-Type: application/json
 }
 
 ### Delete a comment
-DELETE http://localhost:3000/articles/3/comments/1043
+DELETE http://localhost:3000/api/v1/articles/3/comments/1043
 
 
 ### Update a comment
-PATCH http://localhost:3000/articles/1/comments/1044
+PATCH http://localhost:3000/api/v1/articles/1/comments/1044
 Content-Type: application/json
 
 {
