@@ -1,12 +1,12 @@
-
+### GET All Users
 GET http://localhost:3000/api/v1/users
 
-###
+### GET Users by Id
 
 GET http://localhost:3000/api/v1/users/2
 
 
-###
+### ADD a new User
 
 POST http://localhost:3000/api/v1/users
 Content-Type: application/json
@@ -17,7 +17,7 @@ Content-Type: application/json
     "password" : "mt3uz"
 }
 
-###
+### 
 
 POST http://localhost:3000/api/v1/users
 Content-Type: application/json
@@ -30,7 +30,7 @@ Content-Type: application/json
 
 
 
-###
+### 
 
 POST http://localhost:3000/api/v1/users
 Content-Type: application/json
@@ -42,7 +42,7 @@ Content-Type: application/json
 }
 
 
-###
+### 
 
 POST http://localhost:3000/api/v1/users
 Content-Type: application/json
@@ -60,7 +60,7 @@ Content-Type: application/json
 DELETE http://localhost:3000/api/v1/users/4
 
 
-###
+### PATCH a user
 
 PATCH http://localhost:3000/api/v1/users/3
 Content-Type: application/json

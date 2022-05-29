@@ -1,9 +1,9 @@
 
-### Get All comments from an article
+### GET All comments from an article
 GET http://localhost:3000/api/v1/articles/3/comments
 
 
-### Add a comment to an article
+### ADD a comment to an article
 POST http://localhost:3000/api/v1/articles/3/comments
 Content-Type: application/json
 
@@ -12,11 +12,11 @@ Content-Type: application/json
     "contenu" : "May the force be with you ! Always"
 }
 
-### Delete a comment
+### DELETE a comment
 DELETE http://localhost:3000/api/v1/articles/3/comments/1062
 
 
-### Update a comment
+### UPDATE a comment
 PATCH http://localhost:3000/api/v1/articles/3/comments/1044
 Content-Type: application/json
 
