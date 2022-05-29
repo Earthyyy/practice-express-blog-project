@@ -1,2 +1,4 @@
 node_modules
 .env
+practice-express-blog-project
+prisma/migrations
