@@ -7,7 +7,15 @@ exports.getAllArticles = async ( req , res ) => {
     let { take , skip } = req.query
 
     try {
-        const article = await prisma.article.findMany({})
+        const article = await prisma.article.findMany({
+            include : {
+                author : {
+                    select : {
+                        nom : true
+                    }
+                }
+            }
+        })
 
         take = take ? parseInt(take) : article.length
         skip = skip ? parseInt(skip) : 0
@@ -30,6 +38,13 @@ exports.getArticleById = async ( req , res ) => {
         const article = await prisma.article.findUnique({
             where : {
                 id : parseInt(id)
+            } ,
+            include : {
+                author : {
+                    select : {
+                        nom : true
+                    }
+                }
             }
         })
 
