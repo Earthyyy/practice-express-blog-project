@@ -87,7 +87,7 @@ exports.updateCategory = async ( req , res ) => {
         if (updatedCategory) return res.status(204).send({message : "Category Updated Successfully"})
         return res.status(400).send({message : "Bad Request!"})
     } catch(err) {
-        console.log(error)
+        console.log(err)
         return res.status(500)
     }
 }
